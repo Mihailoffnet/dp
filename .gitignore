@@ -1,7 +1,7 @@
 *old*.py
 *Postgres*
 *token*
-_*
+
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -63,8 +63,8 @@ coverage.xml
 
 
 # */migrations/*
-# .log
-# db.sqlite3
+.log
+db.sqlite3
 
 
 # Scrapy stuff:
