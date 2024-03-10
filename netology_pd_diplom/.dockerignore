@@ -1,6 +1,9 @@
 README.md
+db.sqlite3
 db.yaml
 shop1.yaml
 /.idea
 /.vscode
 /env
+.env
+

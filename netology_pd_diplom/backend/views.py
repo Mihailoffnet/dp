@@ -1,7 +1,6 @@
 import threading
 from distutils.util import strtobool
 
-from celery import shared_task
 from django.views.decorators.csrf import csrf_exempt
 from rest_framework.request import Request
 from django.contrib.auth import authenticate
@@ -24,10 +23,9 @@ from backend.models import Shop, Category, Product, ProductInfo, Parameter, \
 from backend.serializers import UserSerializer, CategorySerializer, \
     ShopSerializer, ProductInfoSerializer, OrderItemSerializer, \
     OrderSerializer, ContactSerializer
-from backend.signals import new_order
 from backend.task import new_order_signal, parsing
 
-import time
+
 
 
 class RegisterAccount(APIView):

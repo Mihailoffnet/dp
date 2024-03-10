@@ -6,14 +6,10 @@ from requests import get
 from yaml import load as load_yaml, Loader
 
 from backend.models import Shop, Category, Product, ProductInfo, Parameter, ProductParameter, User
-from netology_pd_diplom.celery import app
-from typing import Type
-from django.http import JsonResponse
 
 from django.conf import settings
 from django.core.mail import EmailMultiAlternatives
 
-from backend.models import ConfirmEmailToken, User
 
 
 @shared_task

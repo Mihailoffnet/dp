@@ -152,8 +152,8 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
 
 EMAIL_HOST = os.getenv("EMAIL_HOST", 'smtp.mail.ru')
-EMAIL_HOST_USER = os.getenv("EMAIL_HOST_USER", 'vinogradov.artemij@bk.ru')
-EMAIL_HOST_PASSWORD = os.getenv("EMAIL_HOST_PASSWORD", 'BNFk9TeLRcFcRumJKx76')
+EMAIL_HOST_USER = os.getenv("EMAIL_HOST_USER", 'mihailoff@inbox.ru')
+EMAIL_HOST_PASSWORD = os.getenv("EMAIL_HOST_PASSWORD", 'akFPZfWuMg8sbJyygrB0')
 EMAIL_PORT = int(os.getenv("EMAIL_PORT", 465))
 EMAIL_USE_SSL = bool(os.getenv("EMAIL_USE_SSL", True))
 SERVER_EMAIL = os.getenv("SERVER_EMAIL", EMAIL_HOST_USER)
@@ -177,11 +177,11 @@ REST_FRAMEWORK = {
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# CELERY_BROKER_URL = 'redis://127.0.0.1:16379/0'
-CELERY_BROKER_URL = 'redis://redis:6379/1'
+CELERY_BROKER_URL = 'redis://127.0.0.1:16379/0'
+# CELERY_BROKER_URL = 'redis://redis:6379/1'
 
-# CELERY_RESULT_BACKEND = 'django-db'
-CELERY_RESULT_BACKEND = 'redis://redis:6379/2'
+CELERY_RESULT_BACKEND = 'django-db'
+# CELERY_RESULT_BACKEND = 'redis://redis:6379/2'
 
 
 # Celery Configuration Options
