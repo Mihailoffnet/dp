@@ -152,8 +152,8 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
 
 EMAIL_HOST = os.getenv("EMAIL_HOST", 'smtp.mail.ru')
-EMAIL_HOST_USER = os.getenv("EMAIL_HOST_USER", 'mihailoff@inbox.ru')
-EMAIL_HOST_PASSWORD = os.getenv("EMAIL_HOST_PASSWORD", 'akFPZfWuMg8sbJyygrB0')
+EMAIL_HOST_USER = os.getenv("EMAIL_HOST_USER", 'netology.diplom@mail.ru')
+EMAIL_HOST_PASSWORD = os.getenv("EMAIL_HOST_PASSWORD", 'RANGVKPEZ61jsCgTbsbG')
 EMAIL_PORT = int(os.getenv("EMAIL_PORT", 465))
 EMAIL_USE_SSL = bool(os.getenv("EMAIL_USE_SSL", True))
 SERVER_EMAIL = os.getenv("SERVER_EMAIL", EMAIL_HOST_USER)
