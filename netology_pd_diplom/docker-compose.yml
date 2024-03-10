@@ -2,15 +2,15 @@ version: "3.9"
 
 services:
 
-  # db:
-  #   image: postgres:14.3-alpine3.15
-  #   ports:
-  #     - "5432:5432"
-  #   hostname: localhost
-  #   environment:
-  #     POSTGRES_USER: postgres
-  #     POSTGRES_PASSWORD: postgres
-  #     POSTGRES_DB: d_project
+  database:
+    image: postgres:14.3-alpine3.15
+    ports:
+      - "5432:5432"
+    hostname: localhost
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: d_project
 
   redis:
     image: redis
@@ -47,5 +47,5 @@ services:
       - "8000:8000"
     env_file:
       - .env
-#    depends_on:
-#      - db
+    depends_on:
+      - database

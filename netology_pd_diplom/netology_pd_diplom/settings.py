@@ -84,14 +84,23 @@ WSGI_APPLICATION = 'netology_pd_diplom.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
+# DATABASES = {
+#
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
+
 DATABASES = {
-
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': os.getenv("DB_NAME", 'd_project'),
+        'HOST': os.getenv("DB_HOST", 'database'),
+        'PORT': int(os.getenv("DB_PORT", '5432')),
+        'USER': os.getenv("DB_USER", 'postgres'),
+        'PASSWORD': os.getenv("DB_PASSWORD", 'postgres'),
     }
-
-
 }
 
 # Password validation
@@ -132,12 +141,12 @@ STATIC_URL = '/static/'
 
 AUTH_USER_MODEL = 'backend.User'
 
-# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
-if DEBUG:
-    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-else:
-    EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+# if DEBUG:
+#     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+# else:
+#     EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
 # настройки почты https://dev-ed.ru/blog/django-email-gmail-mailru-yandex/
 
